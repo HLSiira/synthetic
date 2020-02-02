@@ -1,6 +1,8 @@
 # Sythetic
 
-Simple pulsing hexagonal background for websites by Liam Siira
+Simple pulsing hexagonal background for websites by Liam Siira.
+
+Demo: [Click Here](https://hlsiira.github.io/synthetic/)
 
 ## Installation
 
