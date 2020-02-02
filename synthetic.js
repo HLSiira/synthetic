@@ -89,38 +89,8 @@
 				}
 
 			}
-			// ctx.filter = "opacity(0.2)";
-			// ctx.globalCompositeOperation = 'overlay';
-			// ctx.globalAlpha = 0.2;
-			// for (i = 0; i < width; ++i) {
-			// 	for (j = 0; j < height; ++j) {
-			// 		// ctx.strokeStyle = `rgba(0,0,0,${Math.random() + 0.5})`;
+		},
 
-			// 		this.stroke(
-			// 			ctx,
-			// 			i * hex.rectangleWidth + ((j % 2) * hex.radius),
-			// 			j * (hex.sideLength + hex.height),
-			// 			hex
-			// 		);
-			// 	}
-			// }
-		},
-		stroke: function(ctx, x, y, hex) {
-			ctx.beginPath();
-			ctx.moveTo(x + hex.radius, y);
-			ctx.lineTo(x + hex.rectangleWidth, y + hex.height);
-			ctx.lineTo(x + hex.rectangleWidth, y + hex.height + hex.sideLength);
-			ctx.lineTo(x + hex.radius, y + hex.rectangleHeight);
-			ctx.lineTo(x, y + hex.sideLength + hex.height);
-			ctx.lineTo(x, y + hex.height);
-			ctx.closePath();
-			// ctx.globalCompositeOperation = 'source-over';
-			// ctx.filter = "opacity(1)";
-			// ctx.fill();
-			// ctx.globalCompositeOperation = 'destination-over';
-			// ctx.filter = "opacity(0.2)";
-			ctx.stroke();
-		},
 		draw: function(ctx, x, y, hex) {
 			ctx.beginPath();
 			ctx.moveTo(x + hex.radius, y);
@@ -130,14 +100,9 @@
 			ctx.lineTo(x, y + hex.sideLength + hex.height);
 			ctx.lineTo(x, y + hex.height);
 			ctx.closePath();
-			// ctx.globalCompositeOperation = 'source-over';
-			// ctx.filter = "opacity(1)";
 			ctx.globalAlpha = 1;
 			ctx.fill();
-			// ctx.globalCompositeOperation = 'destination-over';
-			// ctx.filter = "opacity(0.2)";
 			ctx.globalAlpha = 0.2;
-
 			ctx.stroke();
 		}
 
