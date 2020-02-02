@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Synthetic by Liam Siira
+	Siira.us
+	Free for personal and commercial use under the hoppocratic license (https://firstdonoharm.dev/)
+-->
 <html>
 
 <head>
 	<meta charset="utf-8" />
-	<title>Canvas Hexagonal Map</title>
+	<title>Synthetic by Liam Siira</title>
 	<style type="text/css">
 		html,
 		body {
@@ -13,21 +18,41 @@
 			padding: 0 !important;
 		}
 
-		#hexOverlay {
-			height: 100%;
-			left: 0;
-			opacity: .20;
+		/*Hex Overlay*/
+		#synthetic {
+			left: -20px;
+			/*opacity: .15;*/
 			position: fixed;
-			top: 0;
-			width: 100%;
+			top: -20px;
+			z-index: 0;
 			pointer-events: none;
+			height: 120vh;
+			width: 120vw;
+			background: linear-gradient(-45deg, #000 40%, #0074D7 50%, #000 60%);
+			background-size: 600% 600%;
+			animation: gradient 10s linear infinite;
+		}
+
+		@keyframes gradient {
+			0% {
+				background-position: 0% 51%
+			}
+
+			50% {
+				background-position: 100% 50%
+			}
+
+			100% {
+				background-position: 0% 51%
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<canvas id="hexOverlay" width="1024" height="762"></canvas>
-	<script src="hexagons.js"></script>
+	<canvas id="synthetic" width="1024" height="762"></canvas>
+
+	<script src="synthetic.js"></script>
 </body>
 
 </html>
