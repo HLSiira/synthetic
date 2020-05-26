@@ -9,7 +9,7 @@ Demo: [Click Here](https://hlsiira.github.io/synthetic/)
 Add synthetic.min.js to your websites sources and the CSS to your site. It will run on document load, and either create it's own canvas element, or use one you've predefined.
 
 ```html
-	<canvas id="synthetic" width="1024" height="762"></canvas>
+	<canvas id="synthetic"></canvas>
 
 	<script src="synthetic.min.js"></script>
 ```
@@ -20,7 +20,7 @@ Add synthetic.min.js to your websites sources and the CSS to your site. It will 
 	/*opacity: .15;*/
 	position: fixed;
 	top: -20px;
-	z-index: 0;
+	z-index: -1;
 	pointer-events: none;
 	height: 120vh;
 	width: 120vw;
